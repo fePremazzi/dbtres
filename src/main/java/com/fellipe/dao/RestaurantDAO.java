@@ -1,16 +1,16 @@
 package com.fellipe.dao;
 
 import java.util.List;
+import java.util.Optional;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
+import com.fellipe.entities.Rating;
 import com.fellipe.entities.Restaurant;
 
 public interface RestaurantDAO{
 	
 	Restaurant addRestaurant(Restaurant rest);
-	Restaurant deleteRestaurant(Long id);
-	List<Restaurant> listRestaurant();
+	Optional<Restaurant> deleteRestaurant(Long id);
+	List<Restaurant> listAllRestaurant();
+	Restaurant addStar(long id, Rating rate);
 
 }

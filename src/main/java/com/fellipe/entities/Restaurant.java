@@ -20,7 +20,7 @@ public class Restaurant {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idRest;
+	private long idRest;
 	
 	private String name;
 	private String addres;
